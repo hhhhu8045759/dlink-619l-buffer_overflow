@@ -1,5 +1,7 @@
 # dlink-619l-buffer_overflow
 
+the webserver boa in dlink-619L firmware 2.06beta have a stack overflow vulnerability
+
 ![image](https://github.com/hhhhu8045759/dlink-619l-buffer_overflow/blob/master/619_2.png)
 
 when requesting goform/Login authentication, websRedirect at the bottom of function formLogin, websRedirect passes sprintf ("<html> <head> </ head>, body. This d") of the send_r_moved_perm function to copy the Request parameter curTime  to Stack overflow in local variables
